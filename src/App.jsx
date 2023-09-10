@@ -4,18 +4,18 @@ import CallbackPage from "./pages/CallbackPage";
 import MainPage from "./pages/MainPage";
 
 function App() {
-    return (
-        <>
-            <div className="flex">
-                <main className="content">
-                    <Routes>
-                        <Route path="/" element={<MainPage />} />
-                        <Route path="/callback/" element={<CallbackPage />} />
-                    </Routes>
-                </main>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className="flex h-screen bg-gray-900">
+        <main className="flex">
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/callback/" element={<CallbackPage />} />
+          </Routes>
+        </main>
+      </div>
+    </>
+  );
 }
 
 export default App;

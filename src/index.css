@@ -1,3 +1,124 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .sidebar-icon {
+    @apply relative mx-auto mb-2 mt-2 
+        flex h-12 w-12 items-center justify-center rounded-3xl 
+         bg-gray-800
+         text-green-600 shadow-lg transition-all 
+         duration-100 ease-linear hover:rounded-xl
+         hover:bg-green-700 hover:text-white;
+  }
+
+  .sidebar-icon-selected {
+    @apply relative mb-2 ml-2 mr-2 mt-2 
+        flex h-12 w-12 items-center justify-center rounded-xl
+         bg-green-700 text-white 
+         shadow-lg
+         ease-linear hover:rounded-xl;
+  }
+  .sidebar-tooltip {
+    @apply absolute left-14 m-2 w-auto min-w-max origin-left
+    scale-0 rounded-md bg-gray-900 p-2 
+    text-xs font-bold text-white shadow-md transition-all duration-100;
+  }
+
+  .sidebar-hr {
+    @apply mx-3 rounded-full border border-gray-800
+    bg-gray-800;
+  }
+
+  .dropdown {
+    @apply m-0 w-full px-2 pb-2
+    transition duration-300 ease-in-out;
+  }
+
+  .dropdown-header {
+    @apply mx-0 flex cursor-pointer flex-row
+    items-center justify-evenly
+    text-gray-500;
+  }
+
+  .dropdown-selection {
+    @apply ml-2 mr-auto mt-1 flex
+    cursor-pointer flex-row items-center
+    justify-evenly transition duration-300
+    ease-in-out;
+  }
+
+  .dropdown-selection-text {
+    @apply mr-auto cursor-pointer font-semibold
+    tracking-wide 
+    text-gray-500 transition duration-300 
+    ease-in-out hover:text-pink-500
+    dark:hover:text-gray-500;
+  }
+
+  .top-navigation-icon {
+    @apply ml-4
+    mr-3 cursor-pointer
+    text-gray-500 transition duration-300 
+    ease-in-out 
+    hover:text-pink-400;
+  }
+
+  .top-navigation-icon:first {
+    @apply ml-auto mr-4;
+  }
+
+  .title-hashtag {
+    @apply my-auto ml-2 text-lg font-semibold 
+    tracking-wider text-gray-500;
+  }
+
+  .title-text {
+    @apply my-auto ml-2 mr-auto text-xl font-semibold 
+    tracking-wider text-gray-500 text-opacity-80 
+    transition duration-300 ease-in-out;
+  }
+
+  .content-list {
+    @apply mx-auto ml-0 mt-0 
+    flex h-full 
+    w-full flex-col items-center overflow-y-scroll px-0 
+    pb-12;
+  }
+
+  .post {
+    @apply m-0
+    flex w-full cursor-pointer flex-row
+    items-center justify-evenly px-8
+    py-4;
+  }
+
+  .post-content {
+    @apply ml-auto 
+    flex w-4/5 flex-col 
+    justify-start;
+  }
+
+  .avatar-wrapper {
+    @apply m-0 mb-auto ml-auto
+    flex 
+    w-12 flex-col items-center;
+  }
+
+  .avatar {
+    @apply mx-0
+    mb-auto mt-0 
+    h-full w-12
+    flex-none cursor-pointer 
+    rounded-full bg-gray-100 object-cover 
+    shadow-md;
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-500 dark:bg-green-400;
+}
